@@ -14,7 +14,7 @@ def wish_hello_world_handler(event, context):
         s3.Bucket(BUCKET_NAME).download_file(KEY, temp_file)
         file = open(temp_file, "r")
         return {
-            'statusCode': 200
+            'statusCode': 200,
             'body': file.read()
         }
 
